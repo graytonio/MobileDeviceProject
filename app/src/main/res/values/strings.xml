@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecipebyIngredients</string>
+    <string name="background_of_saved_recipes">Background of Saved Recipes</string>
+</resources>
