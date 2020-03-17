@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".SavedRecipes">
+    tools:context=".SavedFragment">
 
     <ImageView
         android:id="@+id/recipesbackgroundImage"
@@ -129,36 +129,6 @@
                     android:textStyle="bold" />
             </LinearLayout>
         </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="bottom">
-
-            <Button
-                android:id="@+id/searchButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.2"
-                android:onClick="onButtonClick"
-                android:text="@android:string/search_go" />
-
-            <Button
-                android:id="@+id/savedRecipesButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:onClick="onButtonClick"
-                android:text="Saved Recipes" />
-
-            <Button
-                android:id="@+id/ingredientsButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:onClick="onButtonClick"
-                android:text="Ingredients" />
-        </LinearLayout>
-
     </LinearLayout>
 
 </FrameLayout>
