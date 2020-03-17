@@ -8,12 +8,16 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+import edu.floridapoly.mobiledeviceapps.sping20.cameronbrantley.recipebyingredients.dummy.DummyContent;
+
+public class MainActivity extends AppCompatActivity implements RecipeFragment.OnListFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         TabLayout tl = (TabLayout) findViewById(R.id.main_nav);
         tl.setupWithViewPager(vp);
 
+    }
+
+    //Saved Recipe is Selected
+    @Override
+    public void onListFragmentInteraction(DummyContent.DummyItem item) {
+        Log.d("List Select", "Item: " + item.id);
+        Toast toast = Toast.makeText(this, "Item "+ item.id + " selected", Toast.LENGTH_LONG);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.show();
     }
 
     private class AppPageAdapter extends FragmentStatePagerAdapter {
